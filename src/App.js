@@ -1,13 +1,24 @@
+import { Route, Switch } from "react-router-dom";
+import MainNavigation from "./component/layout/MainNavigation";
+import AllPostsPage from "./pages/AllPosts";
+import FavoritesPage from "./pages/Favorites";
+import NewPostPage from "./pages/NewPost";
+
 function App() {
     return (
         <div>
-            <h1>My Blog</h1>
-            <div className="card">
-                <h2>Title</h2>
-                <div className="actions">
-                    <button className="btn">Delete</button>
-                </div>
-            </div>
+            <MainNavigation />
+            <Switch>
+                <Route path="/" exact>
+                    <AllPostsPage />
+                </Route>
+                <Route path="/new-post">
+                    <NewPostPage />
+                </Route>
+                <Route path="/favorites">
+                    <FavoritesPage />
+                </Route>
+            </Switch>
         </div>
     );
 }
