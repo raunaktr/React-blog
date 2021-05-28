@@ -9,7 +9,7 @@
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
 }
-c .image img {
+.image img {
     width: 100%;
     object-fit: cover;
 }
